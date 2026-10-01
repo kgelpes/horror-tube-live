@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "horror-tube-live",
+  "main": "worker.ts",
+  "compatibility_date": "2026-08-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"],
+  },
+  "ratelimits": [
+    { "name": "TOKEN_LIMIT", "namespace_id": "2001", "simple": { "limit": 20, "period": 60 } },
+  ],
+  "observability": { "enabled": true },
+  "workers_dev": false,
+  "routes": [{ "pattern": "horror.bidslop.com", "custom_domain": true }],
+}

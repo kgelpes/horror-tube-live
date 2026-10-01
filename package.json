@@ -1,0 +1,21 @@
+{
+  "name": "horror-tube-live",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @horror-tube-live/web dev",
+    "build": "pnpm --filter @horror-tube-live/web build",
+    "typecheck": "pnpm --filter @horror-tube-live/web typecheck",
+    "lint": "oxlint",
+    "format": "oxfmt"
+  },
+  "devDependencies": {
+    "@oxlint/plugins": "1.85.0",
+    "oxfmt": "0.70.0",
+    "oxlint": "1.85.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.6.0"
+}

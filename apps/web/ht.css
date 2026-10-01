@@ -1,0 +1,86 @@
+:root {
+  --ground: #0b0b12;
+  --panel: #16162a;
+  --rule: #2a2a4a;
+  --dim: #4a4a6a;
+  --muted: #8a8cac;
+  --body: #c8c8dc;
+  --bone: #f2f2f8;
+  --blood: #ff2b2b;
+  --blood-deep: #86101a;
+  --cold: #62c6ff;
+  --cold-deep: #1c4c78;
+  --rust: #c9713a;
+  --rust-deep: #6a3417;
+  --sulfur: #d9c35a;
+  --enamel: #4f7f96;
+  --soot: #0c0806;
+  --char: #1c120c;
+  --grime: #3a281c;
+  --alive: #a6ff5c;
+
+  --f-osd: "Silkscreen", "DotGothic16", monospace;
+  --f-body: "DotGothic16", "Silkscreen", monospace;
+  --shade: rgb(0 0 0 / 0.55);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  background: var(--ground);
+  color: var(--body);
+}
+html {
+  cursor:
+    url(assets/cursor.svg) 1 1,
+    default;
+}
+body {
+  font-family: var(--f-body);
+  font-size: 14px;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: none;
+}
+::selection {
+  background: var(--bone);
+  color: var(--ground);
+}
+:focus-visible {
+  outline: 2px solid var(--bone);
+  outline-offset: 2px;
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  text-align: inherit;
+}
+button,
+[data-cursor="press"] {
+  cursor:
+    url(assets/cursor-press.svg) 12 2,
+    pointer;
+}
+canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: block;
+}
+[hidden] {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
